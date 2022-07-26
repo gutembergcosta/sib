@@ -37,6 +37,7 @@ Apenas o parser do HTML q utilizei o [TWIG](https://laravel.com/docs/7.x) para r
 Publiquei este exercício técnico no meu site pessoal. Para acessar e testar em um ambiente de produção acesse: [https://gutemberg.net.br/sib](https://gutemberg.net.br/sib) 
 
 **Login:** admin@admin.com.br
+
 **Senha:** 0102
 
 
