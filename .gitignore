@@ -1,0 +1,10 @@
+
+/vendor
+
+#Novos
+*.jpg
+*.png
+*.zip
+*.rar
+_*
+_*
