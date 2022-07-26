@@ -59,7 +59,7 @@ if ($segmento == 'ajax') {
         $data = [];
         if (isset($slug02)) {
             $db->edit($_POST, $slug02);
-            $data['msg-modal']  = "Usuário atualizado com sucesso";
+            $data['msg-modal']  = "Usuário atualizado com sucesso!";
             $data['titulo']     = "Usuário Atualizado";
         } else {
             $db->insert($_POST);
