@@ -29,7 +29,7 @@ Para as url amigáveis utilizei a partir do HTACCESS fazendo um redirecionamento
 
 Todas as ações ao submeter os formulários são feitas via AJAX.
 
-Apenas o parser do HTML q utilizei o [TWIG](https://laravel.com/docs/7.x) para renderizar o HTML, facilitar a visualição do código e testes.
+Apenas o parser do HTML q utilizei o [TWIG](https://twig.symfony.com/) para renderizar o HTML, facilitar a visualição do código e testes.
 
 
 ## Screenshot
