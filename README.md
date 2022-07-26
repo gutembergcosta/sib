@@ -1,10 +1,8 @@
 <p align="center">
-  <img width="320" src="https://i.imgur.com/RlV7TYC.png">
+  <img width="320" src="https://i.imgur.com/JLTdaci.jpg">
 </p>
 <p align="center">
-  <a href="https://laravel.com/docs/7.x">
-    <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?&style=for-the-badge&logo=laravel&logoColor=white" alt="laravel" />
-  </a>
+
 
   <a href="https://www.mysql.com/">
     <img src="https://img.shields.io/badge/mysql-%234479A1.svg?&style=for-the-badge&logo=mysql&logoColor=white" />
@@ -21,35 +19,33 @@
   </a>
 </p>
 
-# Descrição
+# Observações Gerais
 
-Este projeto tem como finalidade aprofundar meus estudos com o Framework Laravel através da [documentação oficial](https://laravel.com/docs/7.x), a criação de uma API para comunicar com outros 2 projetos em [Vue.js](https://github.com/vuejs/vue) e sua publicação sem servidores da  AWS
+Desenvolvi o sistema utilizando php puro sem auxílio de frameworks. 
 
-Os arquivos aqui presentes são baseados na simulação de uma plataforma de afiliados contendo:
+Para as url amigáveis utilizei a partir do HTACCESS fazendo um redirecionamento 301.
 
-* Website
-* Painel administrativo
-* Painel do representante
-* Sistema de cadastro e recuperação de senha
+Todas as ações ao submeter os formulários são feitas via AJAX.
 
-**Link do projeto:** [https://gutemberg.net.br/laravel](https://gutemberg.net.br/laravel) 
+Apenas o parser do HTML q utilizei o [TWIG](https://laravel.com/docs/7.x) para renderizar o HTML, facilitar a visualição do código e testes.
+
+
+## Acesso
+
+Publiquei este exercício técnico no meu site pessoal.
+
+**Login:** admin@admin.com.br
+**Senha:** 0102
+
+
+**Link do projeto:** [https://gutemberg.net.br/sib](https://gutemberg.net.br/sib) 
 
 ## Screenshot
 <p align="center">
-  <img width="900" src="https://i.imgur.com/X3vIpCT.jpg">
+  <img width="320" src="https://i.imgur.com/kEz0AGA.jpg">
 </p>
 
-### Observações
 
-**Projeto**
-
-* O projeto se baseia em um sistema criado em 2020, 
-* Removi informações pertinentes e textos por Lorem ipsum
-
-**Painel**
-
-* O visual painel foi desenvolvido originalmente em 2015 com bootstrap 3
-* Estou utilizando em outros projetos com finalidade de estudos então contém models e controllers adicionais
 
 
 
