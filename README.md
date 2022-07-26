@@ -32,13 +32,11 @@ Apenas o parser do HTML q utilizei o [TWIG](https://laravel.com/docs/7.x) para r
 
 ## Acesso
 
-Publiquei este exercício técnico no meu site pessoal.
+Publiquei este exercício técnico no meu site pessoal. Para acessar e testar em um ambiente de produção acesse: [https://gutemberg.net.br/sib](https://gutemberg.net.br/sib) 
 
 **Login:** admin@admin.com.br
 **Senha:** 0102
 
-
-**Link do projeto:** [https://gutemberg.net.br/sib](https://gutemberg.net.br/sib) 
 
 ## Screenshot
 <p align="center">

@@ -1,13 +1,16 @@
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
     background-color: lightblue;
     font-family: "Rubik", sans-serif, sans-serif;
-  }
+}
 
-table td{ vertical-align: middle!important;}
+table td {
+    vertical-align: middle !important;
+}
 
 .pagina-login {
     height: 100%;
@@ -24,18 +27,40 @@ table td{ vertical-align: middle!important;}
     background-size: cover;
 }
 
-.titular{background: #409be6; border-radius: .5rem;}
+.titular {
+    background: #409be6;
+    border-radius: .5rem;
+}
 
-#linha-1{display: none;}
+#linha-1 {
+    display: none;
+}
 
-.bg-azul{background: #409be6;}
+.bg-azul {
+    background: #409be6;
+}
 
-.area-login{ background-color: rgba(255, 255, 255, 0.9)}
+.area-login {
+    background-color: rgba(255, 255, 255, 0.9)
+}
 
-.btn-action{margin-top: 32px;}
+.btn-action {
+    margin-top: 32px;
+}
 
-.area{border-radius: 16px}
+.area {
+    border-radius: 16px
+}
 
-.logo{
+.logo {
     margin-top: 100px;
+}
+
+.logo img {
+    width: 60%;
+}
+
+.area-login form {
+    width: 90%;
+    margin: auto;
 }
