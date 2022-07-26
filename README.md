@@ -1,5 +1,7 @@
+
+
 <p align="center">
-  <img width="320" src="https://i.imgur.com/JLTdaci.jpg">
+  <img width="600" src="https://i.imgur.com/JLTdaci.jpg">
 </p>
 <p align="center">
 
@@ -40,7 +42,7 @@ Publiquei este exercício técnico no meu site pessoal. Para acessar e testar em
 
 ## Screenshot
 <p align="center">
-  <img width="320" src="https://i.imgur.com/kEz0AGA.jpg">
+  <img width="600" src="https://i.imgur.com/kEz0AGA.jpg">
 </p>
 
 
