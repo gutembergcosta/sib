@@ -30,8 +30,12 @@ table td{ vertical-align: middle!important;}
 
 .bg-azul{background: #409be6;}
 
-.area-login{ background-color: rgba(255, 255, 255, 0.8)}
+.area-login{ background-color: rgba(255, 255, 255, 0.9)}
 
 .btn-action{margin-top: 32px;}
 
 .area{border-radius: 16px}
+
+.logo{
+    margin-top: 100px;
+}
