@@ -1,0 +1,37 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: lightblue;
+    font-family: "Rubik", sans-serif, sans-serif;
+  }
+
+table td{ vertical-align: middle!important;}
+
+.pagina-login {
+    height: 100%;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pagina-usuarios {
+    min-height: 100%;
+    background-color: #eee;
+    background-image: url("../img/bg_sistema.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titular{background: #409be6; border-radius: .5rem;}
+
+#linha-1{display: none;}
+
+.bg-azul{background: #409be6;}
+
+.area-login{ background-color: rgba(255, 255, 255, 0.8)}
+
+.btn-action{margin-top: 32px;}
+
+.area{border-radius: 16px}

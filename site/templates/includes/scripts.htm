@@ -1,0 +1,147 @@
+<div class="modal fade" id="modal-confirma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir Usuário</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir este usuário? Esta ação não poderá ser revertida</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger destroy" data-id="" >Sim</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-msg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+   
+    $(document).ready(function () {
+        $("form").submit(function (e) {
+            e.preventDefault();
+            var data = $(this).serializeArray();
+            enviaForm(data, $(this).attr('action'));
+        });
+
+        $(".seletor-simples").map(function() {
+            let selecionado = $(this).data('select');
+            if(selecionado) $(this).val(selecionado)
+        });
+
+        $('.btn-del').on( "click", function() {
+            let id = $(this).data('id');
+            $("#modal-confirma .destroy").attr('data-id','');
+            $('#modal-confirma').modal('show');
+            $("#modal-confirma .destroy").attr('data-id',id);
+        });
+
+        $('#modal-msg').on('hidden.bs.modal', function (event) {
+            location.reload();
+        })
+    });
+
+    function enviaForm(dataform,destino){
+        $.ajax({
+            url: destino,
+            type:'POST',
+            dataType: "json",
+            data: dataform,
+            success: function(data) {
+                if(data['errors'])msgAlerta(data['errors']);
+                if(data['destino']){
+                    if(data['destino'] == 'reload'){
+                        location.reload();
+                    }else{
+                        window.location.href = data['destino'];
+                    }
+                }
+                if(data['msg-modal']){
+                    $("#modal-msg p").text('');
+                    $("#modal-msg h5").text('');
+                    
+                    $('#modal-msg').modal('show'); 
+                    $("#modal-msg h5").text(data['titulo']);
+                    $("#modal-msg p").text(data['msg-modal']);  
+                };
+            }
+        });
+    }
+
+
+
+    $(document).on('click', '.destroy',function (e) {	
+            
+        var id = $(e.target).attr('data-id') ;
+        $('#modal-confirma').modal('hide'); 
+                
+        $.ajax({
+            url: "{{base_url}}ajax/deletar",
+            dataType: "json",
+            async:false,
+            type: "POST",
+            data: {
+                'id': id                                      
+            },
+            success: function (data) 
+            {
+                if(data['msg-modal']){
+                    $("#modal-msg p").text('');
+                    $("#modal-msg h5").text(data['titulo']);
+                    $('#modal-msg').modal('show'); 
+                    $("#modal-msg p").text(data['msg-modal']);
+                    $("#modal-msg h5").text(data['titulo']);
+                };
+            },
+            error: function ()
+            {
+                alert("Erro");
+            }
+        });
+            
+    });
+
+    $('.data-tabela-default').DataTable({
+        paging: true,
+        "pageLength": 100,
+        "language": {
+            "lengthMenu": "Exibindo _MENU_ itens por página",
+            "zeroRecords": "0 registros",
+            "info": "Página _PAGE_ de _PAGES_",
+            "paginate": {
+                "first": "Primeira",
+                "last": "Última",
+                "next": "Próxima",
+                "previous": "Anterior"
+            },
+            "search": "Busca:",
+            "infoEmpty": "nenhum registro",
+            "infoFiltered": "(filtrado de _MAX_ registros)"
+        }
+    });
+
+    
+
+</script>

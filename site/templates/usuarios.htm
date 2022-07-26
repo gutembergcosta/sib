@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {{ include('includes/header.htm') }}
+</head>
+<body>
+    <main class="pagina-usuarios">
+        <div class="container py-3">
+            
+            <div class="card area p-4 mb-3">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="titular  py-2 px-3 mb-3 ">
+                            <h4 class="text-white m-0">
+                                Cadastro de Usuários
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                {{ include("includes/form-usuario.htm") }}
+                {{ include("includes/lista-usuarios.htm") }}
+                
+            </div>
+        </div>
+    </main>
+    {{ include('includes/modal.htm') }}
+    {{ include('includes/scripts.htm') }}
+</body>
+</html>
